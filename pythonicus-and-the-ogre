@@ -1,0 +1,541 @@
+# The blank space strings to be passed into the quiz statements. User will be
+# prompted to fill in the blanks correctly before moving on.
+blank_space = ["__1__", "__2__", "__3__", "__4__"]
+
+
+# The following are the strings that will be asked in each difficulty.
+
+# Answers: Python, program, Syntax, variables
+easy_question = "\n".join([
+                "",
+                "__1__ is a language for programming computers. It's named",
+                "after Monty Python. A __2__ is what tells the computer what",
+                "to do.",
+                "__3__ error means that what we tried to evaluate is not part",
+                "of the Python language.",
+                "Python provides a way to give complicated intergers or strings",
+                "a name. They are called __4__.",
+                ""
+                ])
+                
+easy_question_2 = "\n".join([
+                  "",
+                  "Python is a language for programming computers. It's named",
+                  "after Monty Python. A __2__ is what tells the computer what",
+                  "to do.",
+                  "__3__ error means that what we tried to evaluate is not part",
+                  "of the Python language.",
+                  "Python provides a way to give complicated intergers or strings",
+                  "a name. They are called __4__.",
+                  ""
+                  ])
+                  
+easy_question_3 = "\n".join([
+                  "",
+                  "Python is a language for programming computers. It's named",
+                  "after Monty Python. A program is what tells the computer what",
+                  "to do.",
+                  "__3__ error means that what we tried to evaluate is not part",
+                  "of the Python language.",
+                  "Python provides a way to give complicated intergers or strings",
+                  "a name. They are called __4__.",
+                  ""
+                  ])
+                  
+easy_question_4 = "\n".join([
+                  "",
+                  "Python is a language for programming computers. It's named",
+                  "after Monty Python. A program is what tells the computer what",
+                  "to do.",
+                  "Syntax error means that what we tried to evaluate is not part",
+                  "of the Python language.",
+                  "Python provides a way to give complicated intergers or strings",
+                  "a name. They are called __4__.",
+                  ""
+                  ])
+                  
+easy_question_complete = "\n".join([
+                         "",
+                         "Python is a language for programming computers. It's named",
+                         "after Monty Python. A program is what tells the computer what",
+                         "to do.",
+                         "Syntax error means that what we tried to evaluate is not part",
+                         "of the Python language.",
+                         "Python provides a way to give complicated intergers or strings",
+                         "a name. They are called variables",
+                         ""
+                         ])
+
+
+# Answers: bugs, traceback, boolean, inputs
+medium_question = "\n".join([
+                  "",
+                  "You try something in code and it just doesn't work. These",
+                  "are called __1__.",
+                  "The __2__ tells you what line the code crashed on, what",
+                  "file it was running, and how it got there.",
+                  "A __3__ value is one of two things. It's either True or",
+                  "False.",
+                  "The first rule in our Pythonists' Guide to solving all",
+                  "problems in the known computational galaxy is to always ask,",
+                  "what are the __4__?",
+                  ""
+                  ])
+                  
+medium_question_2 = "\n".join([
+                    "",
+                    "You try something in code and it just doesn't work. These",
+                    "are called bugs.",
+                    "The __2__ tells you what line the code crashed on, what",
+                    "file it was running, and how it got there.",
+                    "A __3__ value is one of two things. It's either True or",
+                    "False.",
+                    "The first rule in our Pythonists' Guide to solving all",
+                    "problems in the known computational galaxy is to always ask,",
+                    "what are the __4__?",
+                    ""
+                    ])
+                    
+medium_question_3 = "\n".join([
+                    "",
+                    "You try something in code and it just doesn't work. These",
+                    "are called bugs.",
+                    "The traceback tells you what line the code crashed on, what",
+                    "file it was running, and how it got there.",
+                    "A __3__ value is one of two things. It's either True or",
+                    "False.",
+                    "The first rule in our Pythonists' Guide to solving all",
+                    "problems in the known computational galaxy is to always ask,",
+                    "what are the __4__?",
+                    ""
+                    ])
+                    
+medium_question_4 = "\n".join([
+                    "",
+                    "You try something in code and it just doesn't work. These",
+                    "are called bugs.",
+                    "The traceback tells you what line the code crashed on, what",
+                    "file it was running, and how it got there.",
+                    "A boolean value is one of two things. It's either True or",
+                    "False.",
+                    "The first rule in our Pythonists' Guide to solving all",
+                    "problems in the known computational galaxy is to always ask,",
+                    "what are the __4__?",
+                    ""
+                    ])
+                    
+medium_question_complete = "\n".join([
+                           "",
+                           "You try something in code and it just doesn't work. These",
+                           "are called bugs.",
+                           "The traceback tells you what line the code crashed on, what",
+                           "file it was running, and how it got there.",
+                           "A boolean value is one of two things. It's either True or",
+                           "False.",
+                           "The first rule in our Pythonists' Guide to solving all",
+                           "problems in the known computational galaxy is to always ask,",
+                           "what are the inputs?",
+                           ""
+                           ])
+
+
+# Answers: Hopper, nanosticks, Ada, first
+hard_question = "\n".join([
+                "",
+                "One of the pioneers in computing was Admiral Grace __1__.",
+                "She was famous for walking around with __2__, which were",
+                "pieces of wire that were the length light would travel in",
+                "a nanosecond.",
+                "Augusta __3__ King is often regarded as the __4__ computer",
+                "programmer.",
+                ""
+                ])
+                
+hard_question_2 = "\n".join([
+                  "",
+                  "One of the pioneers in computing was Admiral Grace Hopper.",
+                  "She was famous for walking around with __2__, which were",
+                  "pieces of wire that were the length light would travel in",
+                  "a nanosecond.",
+                  "Augusta __3__ King is often regarded as the __4__ computer",
+                  "programmer.",
+                  ""
+                  ])
+                  
+hard_question_3 = "\n".join([
+                  "",
+                  "One of the pioneers in computing was Admiral Grace Hopper.",
+                  "She was famous for walking around with nanosticks, which were",
+                  "pieces of wire that were the length light would travel in",
+                  "a nanosecond.",
+                  "Augusta __3__ King is often regarded as the __4__ computer",
+                  "programmer.",
+                  ""
+                  ])
+                  
+hard_question_4 = "\n".join([
+                  "",
+                  "One of the pioneers in computing was Admiral Grace Hopper.",
+                  "She was famous for walking around with nanosticks, which were",
+                  "pieces of wire that were the length light would travel in",
+                  "a nanosecond.",
+                  "Augusta Ada King is often regarded as the __4__ computer",
+                  "programmer.",
+                  ""
+                  ])
+                  
+hard_question_complete = "\n".join([
+                         "",
+                         "One of the pioneers in computing was Admiral Grace Hopper.",
+                         "She was famous for walking around with nanosticks, which were",
+                         "pieces of wire that were the length light would travel in",
+                         "a nanosecond.",
+                         "Augusta Ada King is often regarded as the first computer",
+                         "programmer.",
+                         ""
+                         ])
+
+
+# The introduction variable that will displays when the game starts.
+introduction = "\n".join([
+               "Pythonicus and The Ogre",
+               "",
+               "You wake up in a dark cave, not knowing how you got there.", 
+               "Last you remember, you were out picking mushrooms for your",
+               "horse (he's a weird horse) and next thing you know...",
+               "you're in this stinky cavern.",
+               "",
+               "As you examine your surroundings, you notice a crossbow to",
+               "your left and a sword to your right. You also see a big",
+               "hulking ogre chowing down on your mushrooms, which happens",
+               "to be Angry Mushrooms, which happens to make it's",
+               "devourers more angry than usual (your horse is very weird).",
+               "",
+               "Much to your suprise, the ogre stops eating. His eyes gaze",
+               "upon you and starts to advance your way.",
+               "",
+               "What do you do?",
+               "",
+               '- Grab the crossbow and kill him from a distance, duh!  (Enter "Easy")',
+               '- Grab the sword and slice him up with your mad skillz! (Enter "Medium")',
+               '- I will punch him to death!                            (Enter "Hard")',
+               ""
+               ])
+
+
+# This variable prints when the user enters a wrong difficulty.
+choose_difficulty_again = "\n".join([
+                          "",
+                          "The ogre looks confused by your no sense slur.",
+                          "He begins to pick his nose.",
+                          "Nows your chance! What do you do?",
+                          "Hint: Do not add quotations.",
+                          "",
+                          '- Grab the crossbow and kill him from a distance, duh!  (Enter "Easy")',
+                          '- Grab the sword and slice him up with your mad skillz! (Enter "Medium")',
+                          '- I will punch him to death!                            (Enter "Hard")',
+                          ""
+                          ])
+
+
+# This will start the game and print the story introduction. User will be
+# prompt to choose an action(difficulty). Game will not continue until proper
+# input has been entered.
+def pythonicus_introduction():
+    print introduction
+    while True:
+        user_input = raw_input("Choose a difficulty: ")
+        if user_input in ("Easy", "easy", "E", "e"):
+            return easy_level(easy_question, blank_space)
+        elif user_input in ("Medium", "medium", "M", "m"):
+            return medium_level(medium_question, blank_space)
+        elif user_input in ("Hard", "hard", "H", "h"):
+            return hard_level(hard_question, blank_space)
+        else:
+            print choose_difficulty_again
+
+
+# Checks if a blank space is passed into the question.
+def word_in_pos(word, blank_space):
+    for pos in blank_space:
+        if pos in word:
+            return pos
+    return "None"
+
+
+# This varible prints out when the player answers wrong.
+try_again = "\n".join([
+            "",
+            "Nope. That doesn't sound right.",
+            ""
+            ])
+
+
+# This variable prints out the story introduction for the easy level.
+easy_intro = "\n".join([
+             "",
+             "You grab the crossbow, but you notice one glaring problem...",
+             "There's no arrow.",
+             "The ogre makes his way to you, but he doesn't seem angry at",
+             "all. He starts to speak in sentences, but there seems to be",
+             "blanks in between. He's asking for your help in exchange for",
+             "your freedom. You heartily agree. Good luck!"
+             ])
+
+
+# This starts the easy level of the game.
+def easy_level(easy_question, blank_space):
+    print easy_intro
+    print easy_question
+    easy_question = easy_question.split()
+    for word in easy_question:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __1__ ? ")
+                if user_input in ("Python", "python"):
+                    return easy_level_2(easy_question_2, blank_space)
+                else:
+                    print try_again
+
+
+# This starts the easy level 2 of the game.
+def easy_level_2(easy_question_2, blank_space):
+    print easy_question_2
+    easy_question_2 = easy_question_2.split()
+    for word in easy_question_2:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __2__ ? ")
+                if user_input in ("Program", "program", "Programs", "programs"):
+                    return easy_level_3(easy_question_3, blank_space)
+                else:
+                    print try_again
+
+
+# This starts the easy level 3 of the game.
+def easy_level_3(easy_question_3, blank_space):
+    print easy_question_3
+    easy_question_3 = easy_question_3.split()
+    for word in easy_question_3:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __3__ ? ")
+                if user_input in ("Syntax", "syntax"):
+                    return easy_level_4(easy_question_4, blank_space)
+                else:
+                    print try_again
+    
+
+# This starts the easy level 4 of the game.
+def easy_level_4(easy_question_4, blank_space):
+    print easy_question_4
+    easy_question_4 = easy_question_4.split()
+    for word in easy_question_4:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __4__ ? ")
+                if user_input in ("Variable", "variable", "Variables", "variables"):
+                    print easy_question_complete
+                    return end_game()
+                else:
+                    print try_again
+
+
+# This variable prints out the story introduction for the medium level.
+medium_intro = "\n".join([
+               "",
+               "You grab the sword, but you realize it's just an eggplant...",
+               "The ogre makes his way to you, but he doesn't seem angry at",
+               "all. He starts to speak in sentences, but there seems to be",
+               "blanks in between. He's asking for your help in exchange for",
+               "your freedom. You heartily agree. Good luck!"
+               ])
+
+
+# Starts the medium level of the game.
+def medium_level(medium_question, blank_space):
+    print medium_intro
+    print medium_question
+    medium_question = medium_question.split()
+    for word in medium_question:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __1__ ? ")
+                if user_input in ("Bugs", "bugs", "Bug", "bug"):
+                    return medium_level_2(medium_question_2, blank_space)
+                else:
+                    print try_again
+
+
+# Starts the medium level 2 of the game.
+def medium_level_2(medium_question_2, blank_space):
+    print medium_question_2
+    medium_question_2 = medium_question_2.split()
+    for word in medium_question_2:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __2__ ? ")
+                if user_input in ("Traceback", "traceback", "Tracebacks", "tracebacks"):
+                    return medium_level_3(medium_question_3, blank_space)
+                else:
+                    print try_again
+
+
+# Starts the medium level 3 of the game.
+def medium_level_3(medium_question_3, blank_space):
+    print medium_question_3
+    medium_question_3 = medium_question_3.split()
+    for word in medium_question_3:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __3__ ? ")
+                if user_input in ("Boolean", "boolean", "Booleans", "booleans"):
+                    return medium_level_4(medium_question_4, blank_space)
+                else:
+                    print try_again
+
+
+# Starts the medium level 4 of the game.
+def medium_level_4(medium_question_4, blank_space):
+    print medium_question_4
+    medium_question_4 = medium_question_4.split()
+    for word in medium_question_4:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __4__ ? ")
+                if user_input in ("Inputs", "inputs", "Input", "input"):
+                    print medium_question_complete
+                    return end_game()
+                else:
+                    print try_again
+
+
+# This variable prints out the story introduction for the hard level.
+hard_intro = "\n".join([
+             "",
+             "You put your fists up and you see how pretty your hands are.",
+             "It's not worth getting them all messy, so you decide to get a",
+             "beating of a lifetime instead.",
+             "The ogre makes his way to you, but he doesn't seem angry at",
+             "all. He starts to speak in sentences, but there seems to be",
+             "blanks in between. He's asking for your help in exchange for",
+             "your freedom. You heartily agree. Good luck!"
+             ])
+
+
+# Starts the hard level of the game.
+def hard_level(hard_question, blank_space):
+    print hard_intro
+    print hard_question
+    hard_question = hard_question.split()
+    for word in hard_question:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __1__ ? ")
+                if user_input in ("Hopper", "hopper"):
+                    return hard_level_2(hard_question_2, blank_space)
+                else:
+                    print try_again
+
+
+# Starts the hard level 2 of the game.
+def hard_level_2(hard_question_2, blank_space):
+    print hard_question_2
+    hard_question_2 = hard_question_2.split()
+    for word in hard_question_2:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __2__ ? ")
+                if user_input in ("Nanosticks", "nanosticks", "Nanostick", "nanostick"):
+                    return hard_level_3(hard_question_3, blank_space)
+                else:
+                    print try_again
+
+
+# Starts the hard level 3 of the game.
+def hard_level_3(hard_question_3, blank_space):
+    print hard_question_3
+    hard_question_3 = hard_question_3.split()
+    for word in hard_question_3:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __3__ ? ")
+                if user_input in ("Ada", "ada"):
+                    return hard_level_4(hard_question_4, blank_space)
+                else:
+                    print try_again
+
+
+# Starts the hard level 4 of the game.
+def hard_level_4(hard_question_4, blank_space):
+    print hard_question_4
+    hard_question_4 = hard_question_4.split()
+    for word in hard_question_4:
+        pos = word_in_pos(word, blank_space)
+        if pos not in "None":
+            while True:
+                user_input = raw_input("What goes in __4__ ? ")
+                if user_input in ("First", "first", "1st"):
+                    print hard_question_complete
+                    return end_game()
+                else:
+                    print try_again
+
+
+# These are the ending variables that will print when player reaches the
+# end of game.
+ending = "\n".join([
+         "You did it! Good job!",
+         "The ogre looks very happy and he gives you a great big hug!",
+         "He hands you what's left of the Angry Mushrooms and leads you",
+         "out of his lovely home. Your horse will be glad to have dinner.",
+         "Also that you're still alive. I think...",
+         "He might not care about that. He's a weird horse.",
+         ""
+         ])
+
+
+ending_2 = "\n".join([
+           "",
+           "Slur again? Seriously?",
+           ""
+           ])
+
+
+ending_spacing = "\n".join([
+                 "",
+                 "",
+                 ])
+
+
+# This is when the player reaches the end of the game. Player gets an ending to
+# the story and is asked if they would like to play again. "Yes" will restart
+# the program and "No" will close the program.
+def end_game():
+    print ending
+    while True:
+        user_input = raw_input('Would you like to play again? (Enter "Yes" or "No"): ')
+        if user_input in ("No", "no", "N", "n"):
+            break
+        elif user_input in ("Yes", "yes", "Y", "y"):
+            print ending_spacing
+            return pythonicus_introduction()
+        else:
+            print ending_2
+    print ""
+    return "Thanks for playing! May the Force be with you!"
+
+
+# Starts the game.
+print pythonicus_introduction()
