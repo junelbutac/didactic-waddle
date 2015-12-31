@@ -40,13 +40,6 @@ choose_difficulty_again = "\n".join([
                           ])
 
 
-# These variables are passed into next_level(difficulty) to determine the next
-# level to pass into play_level.
-easy = "easy"
-medium = "medium"
-hard = "hard"
-
-
 # The blank space strings to be passed into the quiz statements. User will be
 # prompted to fill in the blanks correctly before moving on.
 blank_space = ["__1__", "__1__.", "__2__", "__2__,", "__3__", "__4__", "__4__.", "__4__?"]
@@ -129,6 +122,23 @@ hard_answers_3 = ["Ada", "ada"]
 hard_answers_4 = ["first", "First", "1st"]
 
 
+# This dictionary gets passed into play_level to determine next level to be played.
+quizzes = {
+    "easy_1": (blank_input_1, easy_answers_1, "easy_2"),
+    "easy_2": (blank_input_2, easy_answers_2, "easy_3"),
+    "easy_3": (blank_input_3, easy_answers_3, "easy_4"),
+    "easy_4": (blank_input_4, easy_answers_4, "end_level"),
+    "medium_1": (blank_input_1, medium_answers_1, "medium_2"),
+    "medium_2": (blank_input_2, medium_answers_2, "medium_3"),
+    "medium_3": (blank_input_3, medium_answers_3, "medium_4"),
+    "medium_4": (blank_input_4, medium_answers_4, "end_level"),
+    "hard_1": (blank_input_1, hard_answers_1, "hard_2"),
+    "hard_2": (blank_input_2, hard_answers_2, "hard_3"),
+    "hard_3": (blank_input_3, hard_answers_3, "hard_4"),
+    "hard_4": (blank_input_4, hard_answers_4, "end_level")
+}
+
+
 def pythonicus_introduction():
     '''
     This will start the game and print the story introduction. User will be
@@ -140,13 +150,13 @@ def pythonicus_introduction():
         user_input = raw_input("Choose a difficulty: ")
         if user_input in ("Easy", "easy", "E", "e"):
             print easy_intro
-            return play_level(easy_question, blank_input_1, easy_answers_1, easy)
+            return play_level(easy_question, *quizzes["easy_1"])
         elif user_input in ("Medium", "medium", "M", "m"):
             print medium_intro
-            return play_level(medium_question, blank_input_1, medium_answers_1, medium)
+            return play_level(medium_question, *quizzes["medium_1"])
         elif user_input in ("Hard", "hard", "H", "h"):
             print hard_intro
-            return play_level(hard_question, blank_input_1, hard_answers_1, hard)
+            return play_level(hard_question, *quizzes["hard_1"])
         else:
             print choose_difficulty_again
 
@@ -161,33 +171,6 @@ def word_in_pos(question, blank_space):
     return "None"
 
 
-def next_level(level_question, blank_input, difficulty):
-    '''
-    Gathers arguments and determines which level should be played next.
-    '''
-    if blank_input in blank_input_1:
-        if difficulty in easy:
-            return play_level(level_question, blank_input_2, easy_answers_2, easy)
-        elif difficulty in medium:
-            return play_level(level_question, blank_input_2, medium_answers_2, medium)
-        else:
-            return play_level(level_question, blank_input_2, hard_answers_2, hard)
-    elif blank_input in blank_input_2:
-        if difficulty in easy:
-            return play_level(level_question, blank_input_3, easy_answers_3, easy)
-        elif difficulty in medium:
-            return play_level(level_question, blank_input_3, medium_answers_3, medium)
-        else:
-            return play_level(level_question, blank_input_3, hard_answers_3, hard)
-    else:
-        if difficulty in easy:
-            return play_level(level_question, blank_input_4, easy_answers_4, easy)
-        elif difficulty in medium:
-            return play_level(level_question, blank_input_4, medium_answers_4, medium)
-        else:
-            return play_level(level_question, blank_input_4, hard_answers_4, hard)
-
-
 # This varible prints out when the player answers wrong.
 try_again = "\n".join([
             "",
@@ -196,31 +179,25 @@ try_again = "\n".join([
             ])
 
 
-def play_level(level_question, blank_input, level_answers, difficulty):
+def play_level(level_question, blank_input, level_answers, next_level):
     '''
     This starts the level of the game.
     '''
-    print ""
-    print level_question
-    print ""
+    print "\n{0}\n".format(level_question)
     level_question = level_question.split()
-    for word in level_question:
-        pos = word_in_pos(level_question, blank_space)
-        if pos in level_question:
-            while True:
-                user_input = raw_input(blank_input)
-                if user_input in level_answers:
-                    level_question = " ".join(level_question)
-                    level_question = level_question.replace(pos, level_answers[0])
-                    if blank_input in blank_input_4:
-                        print ""
-                        print level_question
-                        print ""
-                        return end_game()
-                    else:
-                        return next_level(level_question, blank_input, difficulty)
-                else:
-                    print try_again
+    pos = word_in_pos(level_question, blank_space)
+    while True:
+      user_input = raw_input(blank_input)
+      if user_input in level_answers:
+          level_question = " ".join(level_question)
+          level_question = level_question.replace(pos, level_answers[0])
+          if next_level in "end_level":
+              print "\n{0}\n".format(level_question)
+              return end_game()
+          else:
+              return play_level(level_question, *quizzes[next_level])
+      else:
+          print try_again
 
 
 # These are the ending variables that will print when player reaches the
